@@ -1,0 +1,102 @@
+/* Jersey Villa storefront */
+:root{
+  --green:#16a34a; --green-d:#15803d; --green-s:#dcfce7;
+  --text:#111827; --muted:#6b7280; --line:#e5e7eb; --bg:#fff; --soft:#f8fafc;
+  --red:#dc2626;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.5}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+.topbar{background:var(--green-d);color:#fff;text-align:center;padding:8px 12px;font-size:13px}
+.header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:40}
+.head{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:72px;gap:12px}
+.search{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:8px 12px;max-width:260px}
+.search input{border:0;outline:0;width:100%;background:transparent}
+.logo{display:flex;align-items:center;gap:10px;justify-content:center;font-weight:800}
+.logo img{height:42px;border-radius:8px}
+.head-right{display:flex;justify-content:flex-end;align-items:center;gap:14px}
+.cart-link{position:relative;font-size:22px;background:none;border:0;cursor:pointer}
+.badge{position:absolute;top:-7px;right:-10px;background:var(--green);color:#fff;border-radius:999px;min-width:18px;height:18px;font-size:11px;font-weight:700;display:grid;place-items:center}
+.cats{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;padding:10px 0 14px;font-size:13px;font-weight:600;letter-spacing:.04em;color:#374151}
+.cats a:hover,.cats a.active{color:var(--green)}
+.hero{position:relative;background:#111}
+.hero img{width:100%;height:min(62vh,560px);object-fit:cover}
+.hero-cap{position:absolute;left:8%;bottom:10%;color:#fff;text-shadow:0 2px 16px #000}
+.hero-cap h1{font-size:clamp(32px,6vw,64px);line-height:.95;margin:6px 0}
+.section{padding:42px 0}
+.sec-title{text-align:center;margin-bottom:22px}
+.sec-title h2{font-size:28px}
+.sec-title p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.card:hover{box-shadow:0 10px 24px rgba(0,0,0,.06)}
+.card-img{aspect-ratio:1/1.15;background:#0b0b0c}
+.card-img img{width:100%;height:100%;object-fit:cover}
+.card-body{padding:12px 12px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:15px}
+.prices{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.now{font-weight:800}
+.was{color:var(--muted);text-decoration:line-through;font-size:13px}
+.save{color:var(--green-d);font-size:12px;font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:#fff;border:0;border-radius:10px;padding:10px 12px;font-weight:700;cursor:pointer;width:100%}
+.btn:hover{background:var(--green-d)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.btn-outline{background:#fff;color:var(--text);border:1px solid var(--line)}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.trust div{background:var(--soft);border-radius:14px;padding:18px;text-align:center}
+.faq details{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:600}
+footer{background:#0b0b0c;color:#d1d5db;padding:36px 0 24px;margin-top:20px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+.foot h4{color:#fff;margin-bottom:10px}
+.wa{position:fixed;right:16px;bottom:16px;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-weight:800;z-index:50;box-shadow:0 8px 20px rgba(37,211,102,.4);text-decoration:none}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;z-index:60}
+.overlay.open{display:block}
+.drawer{position:fixed;right:0;top:0;height:100%;width:min(420px,100%);background:#fff;z-index:70;transform:translateX(110%);transition:.25s;display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.dh,.df{padding:16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.df{border-bottom:0;border-top:1px solid var(--line);flex-direction:column;gap:10px;align-items:stretch}
+.db{padding:16px;overflow:auto;flex:1}
+.line{display:grid;grid-template-columns:64px 1fr auto;gap:10px;margin-bottom:12px}
+.line img{width:64px;height:72px;object-fit:cover;border-radius:8px;background:#111}
+.muted{color:var(--muted);font-size:13px}
+.err{color:var(--red);font-size:13px}
+.pdp{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;padding:32px 0}
+.pdp img{width:100%;border-radius:16px;background:#111}
+label{font-size:13px;color:var(--muted);display:block;margin:10px 0 4px}
+input,select,textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.checkout{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+.box{border:1px solid var(--line);border-radius:14px;padding:18px}
+.ok{background:var(--green-s);border:1px solid #86efac;border-radius:12px;padding:14px}
+@media(max-width:900px){
+  .grid,.trust,.pdp,.checkout,.foot{grid-template-columns:1fr}
+  .head{height:auto;padding:10px 0;display:flex;flex-wrap:wrap;justify-content:space-between}
+  .search{max-width:none;flex:1}
+}
+
+.btn-auto{width:auto}
+.mt-8{margin-top:8px}
+.mt-10{margin-top:10px}
+.mt-12{margin-top:12px}
+.mt-16{margin-top:16px}
+.hidden{display:none}
+.pdp-title{font-size:32px;margin:6px 0 10px}
+.pdp-prices{font-size:22px}
+.pdp-desc{margin:14px 0}
+.qty-row{display:flex;gap:8px;margin-top:6px;align-items:center}
+.summary-line{display:flex;justify-content:space-between}
+.hr{margin:12px 0;border:0;border-top:1px solid var(--line)}
+body.admin-page{background:var(--soft)}
+table{width:100%;border-collapse:collapse;font-size:14px;background:#fff}
+th,td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+.admin-wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+.tabs{display:flex;gap:8px;margin:16px 0;flex-wrap:wrap}
+.tabs .btn,.tabs .btn-outline{width:auto}
+.order-row{padding:12px 0;border-bottom:1px solid var(--line)}
+.order-total{margin-top:6px}
+.narrow{width:90px}
+.tiny{width:70px}

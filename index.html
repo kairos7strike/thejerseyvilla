@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Jersey Villa | Premium & Retro Football Jerseys Nepal</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="topbar">Nationwide delivery across Nepal · Cash on delivery · Exchange only</div>
+  <header class="header">
+    <div class="wrap">
+      <div class="head">
+        <form class="search" onsubmit="searchGo(event)">
+          <input id="q" placeholder="Search jerseys" />
+        </form>
+        <a class="logo" href="/"><img src="images/logo.jpeg" alt="The Jersey Villa"><span>The Jersey Villa</span></a>
+        <div class="head-right">
+          <button class="cart-link" onclick="openCart()">Cart <span class="badge" data-cart-count>0</span></button>
+        </div>
+      </div>
+      <nav class="cats" id="cats"></nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="/images/fKLF2.jpg" alt="The Jersey Villa shop">
+    <div class="hero-cap">
+      <div>Butwal · Premium & Retro</div>
+      <h1>Home of football jerseys in Nepal</h1>
+      <p>Current kits, national teams and vintage drops. Order on this website.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-title"><h2>Hot products</h2><p>Best-selling kits right now</p></div>
+      <div class="grid" id="hotGrid"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-title"><h2 id="shopTitle">All jerseys</h2><p>Open a product to pick size</p></div>
+      <div class="grid" id="allGrid"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap trust">
+      <div><h3>Fast delivery</h3><p class="muted">Packed from Butwal and sent nationwide.</p></div>
+      <div><h3>Easy exchange</h3><p class="muted">No returns. Exchange only if the size is wrong.</p></div>
+      <div><h3>Website checkout</h3><p class="muted">Orders are saved in the shop admin.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap faq">
+      <div class="sec-title"><h2>Frequently asked questions</h2></div>
+      <details open><summary>How can I place an order?</summary><p class="muted">Add a jersey to cart, then checkout with your name, phone and address.</p></details>
+      <details><summary>How long does delivery take?</summary><p class="muted">Major cities usually 1–3 days after confirmation.</p></details>
+      <details><summary>What payment methods do you accept?</summary><p class="muted">Cash on delivery.</p></details>
+      <details><summary>Do you offer exchanges or returns?</summary><p class="muted">No returns. Exchange only if unused and the size is wrong.</p></details>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <h4>The Jersey Villa</h4>
+        <p>Premium & retro football jerseys · Butwal, Nepal</p>
+        <p class="muted">Help: 9821971258</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <p><a href="/">All jerseys</a></p>
+        <p><a href="/checkout">Checkout</a></p>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <p><a href="https://www.facebook.com/thejerseyvilla" target="_blank">Facebook</a></p>
+        <p><a href="https://www.instagram.com/thejerseyvilla" target="_blank">Instagram</a></p>
+        
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa" href="https://wa.me/9779821971258?text=Hi%20Jersey%20Villa%2C%20I%20need%20help%20with%20an%20order." target="_blank">WA</a>
+  <div class="overlay" id="overlay" onclick="closeCart()"></div>
+  <aside class="drawer" id="drawer">
+    <div class="dh"><b>Your cart</b><button class="btn-outline btn-auto" onclick="closeCart()">Close</button></div>
+    <div class="db" id="cartBody"></div>
+    <div class="df" id="cartFoot"></div>
+  </aside>
+
+  <script src="/shop.js"></script>
+  <script src="/home.js"></script>
+</body>
+</html>

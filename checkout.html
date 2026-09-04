@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | The Jersey Villa</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="topbar">Cash on delivery · We confirm before dispatch</div>
+  <header class="header">
+    <div class="wrap">
+      <div class="head">
+        <div></div>
+        <a class="logo" href="/"><img src="/images/3DRgw.jpg" alt=""><span>The Jersey Villa</span></a>
+        <div></div>
+      </div>
+    </div>
+  </header>
+  <section class="section">
+    <div class="wrap checkout">
+      <div class="box">
+        <h2>Delivery details</h2>
+        <label>Full name</label><input id="name">
+        <label>Phone</label><input id="phone" placeholder="98xxxxxxxx">
+        <label>City</label><input id="city" placeholder="Butwal">
+        <label>Address</label><textarea id="address" placeholder="Tole, landmark, house"></textarea>
+        <label>Notes (name/number print)</label><textarea id="notes"></textarea>
+        <label>Payment</label>
+        <select id="payment"><option value="cod">Cash on delivery</option></select>
+        <p class="err" id="err"></p>
+        <button class="btn mt-12" id="placeBtn">Place order</button>
+      </div>
+      <div class="box" id="summary"></div>
+    </div>
+  </section>
+  <script src="/shop.js"></script>
+  <script src="/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product | The Jersey Villa</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="topbar">Shipping is calculated at checkout · Cash on delivery</div>
+  <header class="header">
+    <div class="wrap">
+      <div class="head">
+        <form class="search" onsubmit="searchGo(event)"><input id="q" placeholder="Search jerseys" /></form>
+        <a class="logo" href="/"><img src="/images/3DRgw.jpg" alt=""><span>The Jersey Villa</span></a>
+        <div class="head-right"><button class="cart-link" onclick="openCart()">Cart <span class="badge" data-cart-count>0</span></button></div>
+      </div>
+    </div>
+  </header>
+  <div class="wrap pdp" id="pdp"><p class="muted">Loading...</p></div>
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-title"><h2>Often bought together</h2></div>
+      <div class="grid" id="related"></div>
+    </div>
+  </section>
+  <footer>
+    <div class="wrap foot">
+      <div><h4>The Jersey Villa</h4><p>Butwal, Nepal</p></div>
+      <div><h4>Shop</h4><p><a href="/">All jerseys</a></p></div>
+      <div><h4>Staff</h4><p><a href="/admin">Admin login</a></p></div>
+    </div>
+  </footer>
+  <a class="wa" href="https://wa.me/9779821971258?text=Hi%20Jersey%20Villa%2C%20I%20need%20help." target="_blank">WA</a>
+  <div class="overlay" id="overlay" onclick="closeCart()"></div>
+  <aside class="drawer" id="drawer">
+    <div class="dh"><b>Your cart</b><button class="btn-outline btn-auto" onclick="closeCart()">Close</button></div>
+    <div class="db" id="cartBody"></div>
+    <div class="df" id="cartFoot"></div>
+  </aside>
+  <script src="/shop.js"></script>
+  <script src="/product.js"></script>
+</body>
+</html>
